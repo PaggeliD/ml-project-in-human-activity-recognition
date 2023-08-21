@@ -16,6 +16,7 @@ Windows of 20 seconds with a step of 1 second are selected. In each window we as
 4. Minimum value
 5. DIfference of maximum and minimum values
 6. Spectrum power estimation using Welch's method
+
 In the end what's left is a feature vector column and the activity column for each window of the signal.
 ## Training and Test Process
 We trained our model using the LOSO (Leave-One-Subject-Out) Cross Validation method. With this method, we used as training set the extracted features of the 1,...,i-1,i+1,...,n participants and as a test set the extracted features of the i participant. This procedure is being repeated 10 times. Finally adding the confusion matrices together we get a final confusion matrix where we can evaluate each classification method and compute the evaluation metrics.
@@ -122,7 +123,7 @@ The code was implemented using Python 3.10.12 on Ubuntu 22.04. The required depe
 - [Jupyter Notebook](https://jupyter.org/)
 
 ## References
-- [Shoaib, Muhammad, et al. "A survey of online activity recognition using mobile phones." Sensors 15.1 (2015): 2059-2085.](https://www.mdpi.com/1424-8220/15/1/2059.)
+- [Shoaib, M., Bosch, S., Incel, O. D., Scholten, H., & Havinga, P. J. (2015). A survey of online activity recognition using mobile phones. Sensors, 15(1), 2059-2085.](https://www.mdpi.com/1424-8220/15/1/2059.)
 
 
 
