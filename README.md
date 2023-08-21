@@ -41,6 +41,8 @@ The overall accuracy was 82.73% and the optimal parameters C: 100 and \gamma: 0.
 
 The confusion matrix for all participants is:
 
+![complete_cm_svm](https://github.com/PaggeliD/ml-project-in-human-activity-recognition/blob/main/images/svm/complete_conf_matrix.png)
+
 ### K-Nearest Neighbors
 The overall accuracy was 82.75% and the optimal parameters n_neighbors: 20. The following table contains the Precision, Recall and F1-Score for each class:
 | Class      | Precision | Recall | F1-Score |
@@ -60,6 +62,8 @@ The overall accuracy was 82.75% and the optimal parameters n_neighbors: 20. The 
 | weighted avg | 0.83      | 0.83   | 0.83     |
 
 The confusion matrix for all participants is:
+
+![complete_cm_knn](https://github.com/PaggeliD/ml-project-in-human-activity-recognition/blob/main/images/knn/complete_confusion_matrix.png)
 
 ### Decision Trees
 The overall accuracy is 85.92% and the optimal parameters are max_depth: 20 and criterion: entropy. The following table contains the Precision, Recall and F1-Score for each class:
@@ -81,6 +85,8 @@ The overall accuracy is 85.92% and the optimal parameters are max_depth: 20 and 
 
 The confusion matrix for all participants is:
 
+![complete_cm_trees](https://github.com/PaggeliD/ml-project-in-human-activity-recognition/blob/main/images/trees/complete_conf_matrix.png)
+
 ### MLP (Multilayer Perceptron)
 For this neural network model we used one hidden layer with 71 neurons and the stochastic gradient descent, with momentum, as the optimizer. The overall accuracy was 84% and the optimal parameters were momentum: 0.9 and rate: 0.2. The following table contains the Precision, Recall and F1-Score for each class:
 | Class      | Precision | Recall | F1-Score |
@@ -98,6 +104,10 @@ For this neural network model we used one hidden layer with 71 neurons and the s
 | accuracy     |           |        | 0.84     |
 | macro avg    | 0.85      | 0.84   | 0.84     |
 | weighted avg | 0.85      | 0.84   | 0.84     |
+
+The confusion matrix for all participants is:
+
+![complete_cm_mlp](https://github.com/PaggeliD/ml-project-in-human-activity-recognition/blob/main/images/mlp/complete_conf_matrix.png)
 
 ### Results
 It is clear that the algorithm of every classification method we used, confuses, at a very high rate, the activities of standing and sitting. We regrouped the dataset by joining together the data of standing and sitting activities as one activity. After regrouping the data, the accuracy we achieved for every classification method was: SVM 94.89%, KNN 95.26%, Decision Trees 93.84, MLP 94.51% respectively. Furthermore, we chose SVM as the optimal estimator and as train set the right pocket values of all the participants and as test set the values of the left pocket and wrist for a random participant. Remarkably enough the algorithm was able to predict the activities using as test set the left pocket values at a rate of 98.88% accuracy. On the other hand, the algorithm confused the activities at a rate of 42.06% accuracy using as test set the wrist values.
