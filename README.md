@@ -110,10 +110,19 @@ The confusion matrix for all participants is:
 ![complete_cm_mlp](https://github.com/PaggeliD/ml-project-in-human-activity-recognition/blob/main/images/mlp/complete_conf_matrix.png)
 
 ### Results
-It is clear that the algorithm of every classification method we used, confuses, at a very high rate, the activities of standing and sitting. We regrouped the dataset by joining together the data of standing and sitting activities as one activity. After regrouping the data, the accuracy we achieved for every classification method was: SVM 94.89%, KNN 95.26%, Decision Trees 93.84, MLP 94.51% respectively. Furthermore, we chose SVM as the optimal estimator and as train set the right pocket values of all the participants and as test set the values of the left pocket and wrist for a random participant. Remarkably enough the algorithm was able to predict the activities using as test set the left pocket values at a rate of 98.88% accuracy. On the other hand, the algorithm confused the activities at a rate of 42.06% accuracy using as test set the wrist values.
+It is clear that the algorithm of every classification method we used, confuses, at a very high rate, the activities of standing and sitting. We regrouped the dataset by joining together the data of standing and sitting activities as one activity. After regrouping the data, the accuracy we achieved for every classification method was: SVM 94.89%, KNN 95.26%, Decision Trees 93.84, MLP 94.51% respectively. Furthermore, we chose SVM as the optimal estimator and as train set the right pocket values of all the participants and as test set the values of the left pocket and wrist for a random participant. Remarkably enough the algorithm was able to predict the activities using as test set the left pocket values at a rate of 98.88% accuracy. On the other hand, the algorithm confused the activities at a rate of 42.06% accuracy using as test set the wrist values. The "images" folder contains the confusion matrices of the regrouped dataset, the left pocket values dataset and the wrist values dataset.
+
+## Installation
+The code was implemented using Python 3.10.12 on Ubuntu 22.04. The required dependencies of this project are:
+- [NumPy](https://numpy.org/)
+- [Pandas](https://pandas.pydata.org/)
+- [Matplotlib](https://matplotlib.org/)
+- [Scikit-learn](https://scikit-learn.org/stable/)
+- [TensorFlow](https://www.tensorflow.org/)
+- [Jupyter Notebook](https://jupyter.org/)
 
 ## References
-- Shoaib, Muhammad, et al. "A survey of online activity recognition using mobile phones." Sensors 15.1 (2015): 2059-2085. [Link](https://www.mdpi.com/1424-8220/15/1/2059.)
+- [Shoaib, Muhammad, et al. "A survey of online activity recognition using mobile phones." Sensors 15.1 (2015): 2059-2085.](https://www.mdpi.com/1424-8220/15/1/2059.)
 
 
 
